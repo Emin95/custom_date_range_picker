@@ -214,7 +214,11 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                       ),
                       Padding(
                         padding: const EdgeInsets.only(
-                            left: 16, right: 16, bottom: 16, top: 8),
+                          left: 16,
+                          right: 16,
+                          bottom: 16,
+                          top: 8,
+                        ),
                         child: Row(
                           children: [
                             Expanded(
@@ -222,6 +226,9 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                                 height: 44,
                                 child: OutlinedButton(
                                   style: ButtonStyle(
+                                    padding: MaterialStateProperty.all(
+                                      EdgeInsets.zero,
+                                    ),
                                     side: MaterialStateProperty.all(
                                         BorderSide(color: widget.primaryColor)),
                                     shape: MaterialStateProperty.all(
@@ -260,6 +267,9 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                                 height: 44,
                                 child: OutlinedButton(
                                   style: ButtonStyle(
+                                    padding: MaterialStateProperty.all(
+                                      EdgeInsets.zero,
+                                    ),
                                     side: MaterialStateProperty.all(
                                         BorderSide(color: widget.primaryColor)),
                                     shape: MaterialStateProperty.all(
