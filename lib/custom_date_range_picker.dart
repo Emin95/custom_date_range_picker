@@ -1,3 +1,5 @@
+import 'package:custom_date_range_picker/l10n/extensions/app_localization.dart';
+
 import 'custom_calendar.dart';
 import 'package:flutter/material.dart';
 
@@ -131,7 +133,7 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
                                 Text(
-                                  'From',
+                                  context.l10n.from,
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontWeight: FontWeight.w400,
@@ -167,7 +169,7 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
                                 Text(
-                                  'To',
+                                  context.l10n.to,
                                   style: TextStyle(
                                     fontWeight: FontWeight.w400,
                                     fontSize: 16,
@@ -216,12 +218,8 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                         child: Row(
                           children: [
                             Expanded(
-                              child: Container(
-                                height: 48,
-                                decoration: const BoxDecoration(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(24.0)),
-                                ),
+                              child: SizedBox(
+                                height: 44,
                                 child: OutlinedButton(
                                   style: ButtonStyle(
                                     side: MaterialStateProperty.all(
@@ -229,11 +227,13 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                                     shape: MaterialStateProperty.all(
                                       const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.all(
-                                            Radius.circular(24.0)),
+                                          Radius.circular(6),
+                                        ),
                                       ),
                                     ),
                                     backgroundColor: MaterialStateProperty.all(
-                                        widget.primaryColor),
+                                      Colors.transparent,
+                                    ),
                                   ),
                                   onPressed: () {
                                     try {
@@ -241,13 +241,13 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                                       Navigator.pop(context);
                                     } catch (_) {}
                                   },
-                                  child: const Center(
+                                  child: Center(
                                     child: Text(
-                                      'Cancel',
+                                      context.l10n.cancel,
                                       style: TextStyle(
                                         fontWeight: FontWeight.w500,
                                         fontSize: 18,
-                                        color: Colors.white,
+                                        color: widget.primaryColor,
                                       ),
                                     ),
                                   ),
@@ -256,12 +256,8 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                             ),
                             const SizedBox(width: 16),
                             Expanded(
-                              child: Container(
-                                height: 48,
-                                decoration: const BoxDecoration(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(24.0)),
-                                ),
+                              child: SizedBox(
+                                height: 44,
                                 child: OutlinedButton(
                                   style: ButtonStyle(
                                     side: MaterialStateProperty.all(
@@ -269,11 +265,13 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                                     shape: MaterialStateProperty.all(
                                       const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.all(
-                                            Radius.circular(24.0)),
+                                          Radius.circular(6),
+                                        ),
                                       ),
                                     ),
                                     backgroundColor: MaterialStateProperty.all(
-                                        widget.primaryColor),
+                                      widget.primaryColor,
+                                    ),
                                   ),
                                   onPressed: () {
                                     try {
@@ -281,10 +279,10 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                                       Navigator.pop(context);
                                     } catch (_) {}
                                   },
-                                  child: const Center(
+                                  child: Center(
                                     child: Text(
-                                      'Apply',
-                                      style: TextStyle(
+                                      context.l10n.apply,
+                                      style: const TextStyle(
                                         fontWeight: FontWeight.w500,
                                         fontSize: 18,
                                         color: Colors.white,

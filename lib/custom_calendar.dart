@@ -1,3 +1,4 @@
+import 'package:custom_date_range_picker/l10n/extensions/string_extension.dart';
 import 'package:flutter/material.dart';
 
 /// user for DateTime formatting
@@ -133,7 +134,10 @@ class CustomCalendarState extends State<CustomCalendar> {
               Expanded(
                 child: Center(
                   child: Text(
-                    DateFormat('MMMM, yyyy').format(currentMonthDate),
+                    DateFormat(
+                      'MMMM, yyyy',
+                      Localizations.localeOf(context).languageCode,
+                    ).format(currentMonthDate).capitalize(),
                     style: TextStyle(
                       fontWeight: FontWeight.w500,
                       fontSize: 20,
@@ -179,7 +183,7 @@ class CustomCalendarState extends State<CustomCalendar> {
         Padding(
           padding: const EdgeInsets.only(right: 8, left: 8, bottom: 8),
           child: Row(
-            children: getDaysNameUI(),
+            children: getDaysNameUI(context),
           ),
         ),
         Padding(
@@ -192,14 +196,17 @@ class CustomCalendarState extends State<CustomCalendar> {
     );
   }
 
-  List<Widget> getDaysNameUI() {
+  List<Widget> getDaysNameUI(BuildContext context) {
     final List<Widget> listUI = <Widget>[];
     for (int i = 0; i < 7; i++) {
       listUI.add(
         Expanded(
           child: Center(
             child: Text(
-              DateFormat('EEE').format(dateList[i]),
+              DateFormat(
+                'EEE',
+                Localizations.localeOf(context).languageCode,
+              ).format(dateList[i]),
               style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w500,

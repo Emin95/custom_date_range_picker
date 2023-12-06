@@ -1,0 +1,7 @@
+preferred-supported-locales: [en, ru, az]
+synthetic-package: false
+output-dir: ./lib/l10n/generated
+arb-dir: ./lib/l10n
+template-arb-file: intl_ru.arb
+output-localization-file: date_range_picker_localizations.dart
+output-class: DateRangePickerLocalization

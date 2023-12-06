@@ -1,5 +1,8 @@
 import 'package:custom_date_range_picker/custom_date_range_picker.dart';
+import 'package:custom_date_range_picker/l10n/generated/date_range_picker_localizations.dart';
+import 'package:examples/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart';
 
 void main() {
@@ -17,6 +20,19 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.light,
         primarySwatch: Colors.purple,
       ),
+      localizationsDelegates: const [
+        AppLocalization.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        DateRangePickerLocalization.delegate,
+      ],
+      supportedLocales: const [
+        Locale('ru', 'RU'),
+        Locale('az', 'AZ'),
+        Locale('en', 'US'),
+      ],
+      locale: const Locale('ru'),
       home: const MyHomePage(),
     );
   }
