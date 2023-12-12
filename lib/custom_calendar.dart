@@ -141,7 +141,9 @@ class CustomCalendarState extends State<CustomCalendar> {
                     style: TextStyle(
                       fontWeight: FontWeight.w500,
                       fontSize: 20,
-                      color: Colors.grey.shade700,
+                      color: Theme.of(context).brightness == Brightness.light
+                          ? Colors.grey.shade700
+                          : Colors.white,
                     ),
                   ),
                 ),
@@ -343,7 +345,10 @@ class CustomCalendarState extends State<CustomCalendar> {
                                       ? Colors.white
                                       : currentMonthDate.month == date.month
                                           ? widget.primaryColor
-                                          : Colors.grey.withOpacity(0.6),
+                                          : Theme.of(context).brightness ==
+                                                  Brightness.light
+                                              ? Colors.grey.withOpacity(0.6)
+                                              : Colors.white.withOpacity(0.6),
                                   fontSize:
                                       MediaQuery.of(context).size.width > 360
                                           ? 18

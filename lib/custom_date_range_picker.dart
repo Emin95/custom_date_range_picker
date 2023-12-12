@@ -138,7 +138,10 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                                   style: TextStyle(
                                     fontWeight: FontWeight.w400,
                                     fontSize: 16,
-                                    color: Colors.grey.shade700,
+                                    color: Theme.of(context).brightness ==
+                                            Brightness.light
+                                        ? Colors.grey.shade700
+                                        : Colors.white.withOpacity(0.6),
                                   ),
                                 ),
                                 const SizedBox(
@@ -152,7 +155,10 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 16,
-                                    color: Colors.grey.shade700,
+                                    color: Theme.of(context).brightness ==
+                                            Brightness.light
+                                        ? Colors.grey.shade700
+                                        : Colors.white,
                                   ),
                                 ),
                               ],
@@ -173,7 +179,10 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                                   style: TextStyle(
                                     fontWeight: FontWeight.w400,
                                     fontSize: 16,
-                                    color: Colors.grey.shade700,
+                                    color: Theme.of(context).brightness ==
+                                            Brightness.light
+                                        ? Colors.grey.shade700
+                                        : Colors.white.withOpacity(0.6),
                                   ),
                                 ),
                                 const SizedBox(
@@ -187,7 +196,10 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 16,
-                                    color: Colors.grey.shade700,
+                                    color: Theme.of(context).brightness ==
+                                            Brightness.light
+                                        ? Colors.grey.shade700
+                                        : Colors.white,
                                   ),
                                 ),
                               ],

@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        brightness: Brightness.light,
+        brightness: Brightness.dark,
         primarySwatch: Colors.purple,
       ),
       localizationsDelegates: const [
@@ -94,27 +94,19 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
+          final now = DateTime.now();
+
           showCustomDateRangePicker(
             context,
-            dismissible: true,
-            minimumDate: DateTime.now().subtract(const Duration(days: 30)),
-            maximumDate: DateTime.now().add(const Duration(days: 30)),
-            endDate: endDate,
-            startDate: startDate,
-            backgroundColor: Colors.white,
-            primaryColor: Colors.green,
-            onApplyClick: (start, end) {
-              setState(() {
-                endDate = end;
-                startDate = start;
-              });
-            },
-            onCancelClick: () {
-              setState(() {
-                endDate = null;
-                startDate = null;
-              });
-            },
+            dismissible: false,
+            minimumDate: now.copyWith(year: now.year - 100),
+            maximumDate: now,
+            backgroundColor: Color.fromRGBO(100, 21, 26, 1),
+            primaryColor: Color.fromRGBO(255, 56, 80, 1),
+            startDate: now,
+            endDate: now,
+            onApplyClick: (start, end) {},
+            onCancelClick: () {},
           );
         },
         tooltip: 'choose date Range',
