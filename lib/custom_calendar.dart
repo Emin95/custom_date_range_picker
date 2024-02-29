@@ -33,14 +33,14 @@ class CustomCalendar extends StatefulWidget {
   final Function(DateTime, DateTime)? startEndDateChange;
 
   const CustomCalendar({
-    Key? key,
+    super.key,
     this.initialStartDate,
     this.initialEndDate,
     this.startEndDateChange,
     this.minimumDate,
     this.maximumDate,
     required this.primaryColor,
-  }) : super(key: key);
+  });
 
   @override
   CustomCalendarState createState() => CustomCalendarState();

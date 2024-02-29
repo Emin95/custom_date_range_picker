@@ -48,7 +48,7 @@ class CustomDateRangePicker extends StatefulWidget {
   final Function() onCancelClick;
 
   const CustomDateRangePicker({
-    Key? key,
+    super.key,
     this.initialStartDate,
     this.initialEndDate,
     required this.primaryColor,
@@ -58,7 +58,7 @@ class CustomDateRangePicker extends StatefulWidget {
     required this.minimumDate,
     required this.maximumDate,
     required this.onCancelClick,
-  }) : super(key: key);
+  });
 
   @override
   CustomDateRangePickerState createState() => CustomDateRangePickerState();
