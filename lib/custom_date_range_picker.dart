@@ -238,19 +238,19 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                                 height: 44,
                                 child: OutlinedButton(
                                   style: ButtonStyle(
-                                    padding: MaterialStateProperty.all(
+                                    padding: WidgetStateProperty.all(
                                       EdgeInsets.zero,
                                     ),
-                                    side: MaterialStateProperty.all(
+                                    side: WidgetStateProperty.all(
                                         BorderSide(color: widget.primaryColor)),
-                                    shape: MaterialStateProperty.all(
+                                    shape: WidgetStateProperty.all(
                                       const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.all(
                                           Radius.circular(6),
                                         ),
                                       ),
                                     ),
-                                    backgroundColor: MaterialStateProperty.all(
+                                    backgroundColor: WidgetStateProperty.all(
                                       Colors.transparent,
                                     ),
                                   ),
@@ -279,19 +279,19 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                                 height: 44,
                                 child: OutlinedButton(
                                   style: ButtonStyle(
-                                    padding: MaterialStateProperty.all(
+                                    padding: WidgetStateProperty.all(
                                       EdgeInsets.zero,
                                     ),
-                                    side: MaterialStateProperty.all(
+                                    side: WidgetStateProperty.all(
                                         BorderSide(color: widget.primaryColor)),
-                                    shape: MaterialStateProperty.all(
+                                    shape: WidgetStateProperty.all(
                                       const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.all(
                                           Radius.circular(6),
                                         ),
                                       ),
                                     ),
-                                    backgroundColor: MaterialStateProperty.all(
+                                    backgroundColor: WidgetStateProperty.all(
                                       widget.primaryColor,
                                     ),
                                   ),

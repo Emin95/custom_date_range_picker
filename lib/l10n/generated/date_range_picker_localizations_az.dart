@@ -2,7 +2,7 @@ import 'date_range_picker_localizations.dart';
 
 /// The translations for Azerbaijani (`az`).
 class DateRangePickerLocalizationAz extends DateRangePickerLocalization {
-  DateRangePickerLocalizationAz([String locale = 'az']) : super(locale);
+  DateRangePickerLocalizationAz([super.locale = 'az']);
 
   @override
   String get from => 'Başlanğıc tarix';

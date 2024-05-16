@@ -2,7 +2,7 @@ import 'date_range_picker_localizations.dart';
 
 /// The translations for Russian (`ru`).
 class DateRangePickerLocalizationRu extends DateRangePickerLocalization {
-  DateRangePickerLocalizationRu([String locale = 'ru']) : super(locale);
+  DateRangePickerLocalizationRu([super.locale = 'ru']);
 
   @override
   String get from => 'Дата начала';

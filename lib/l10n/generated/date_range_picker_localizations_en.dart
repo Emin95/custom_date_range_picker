@@ -2,7 +2,7 @@ import 'date_range_picker_localizations.dart';
 
 /// The translations for English (`en`).
 class DateRangePickerLocalizationEn extends DateRangePickerLocalization {
-  DateRangePickerLocalizationEn([String locale = 'en']) : super(locale);
+  DateRangePickerLocalizationEn([super.locale = 'en']);
 
   @override
   String get from => 'From';
