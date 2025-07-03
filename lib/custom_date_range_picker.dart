@@ -112,7 +112,7 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                   borderRadius: const BorderRadius.all(Radius.circular(24.0)),
                   boxShadow: <BoxShadow>[
                     BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
+                        color: Colors.grey.withValues(alpha: 0.2),
                         offset: const Offset(4, 4),
                         blurRadius: 8.0),
                   ],
@@ -141,7 +141,7 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                                     color: Theme.of(context).brightness ==
                                             Brightness.light
                                         ? Colors.grey.shade700
-                                        : Colors.white.withOpacity(0.6),
+                                        : Colors.white.withValues(alpha: 0.6),
                                   ),
                                 ),
                                 const SizedBox(
@@ -182,7 +182,7 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                                     color: Theme.of(context).brightness ==
                                             Brightness.light
                                         ? Colors.grey.shade700
-                                        : Colors.white.withOpacity(0.6),
+                                        : Colors.white.withValues(alpha: 0.6),
                                   ),
                                 ),
                                 const SizedBox(

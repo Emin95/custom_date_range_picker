@@ -249,7 +249,7 @@ class CustomCalendarState extends State<CustomCalendar> {
                             color: startDate != null && endDate != null
                                 ? getIsItStartAndEndDate(date) ||
                                         getIsInRange(date)
-                                    ? widget.primaryColor.withOpacity(0.4)
+                                    ? widget.primaryColor.withValues(alpha: 0.4)
                                     : Colors.transparent
                                 : Colors.transparent,
                             borderRadius: BorderRadius.only(
@@ -331,7 +331,8 @@ class CustomCalendarState extends State<CustomCalendar> {
                             boxShadow: getIsItStartAndEndDate(date)
                                 ? <BoxShadow>[
                                     BoxShadow(
-                                        color: Colors.grey.withOpacity(0.6),
+                                        color:
+                                            Colors.grey.withValues(alpha: 0.6),
                                         blurRadius: 4,
                                         offset: const Offset(0, 0)),
                                   ]
@@ -347,8 +348,10 @@ class CustomCalendarState extends State<CustomCalendar> {
                                           ? widget.primaryColor
                                           : Theme.of(context).brightness ==
                                                   Brightness.light
-                                              ? Colors.grey.withOpacity(0.6)
-                                              : Colors.white.withOpacity(0.6),
+                                              ? Colors.grey
+                                                  .withValues(alpha: 0.6)
+                                              : Colors.white
+                                                  .withValues(alpha: 0.6),
                                   fontSize:
                                       MediaQuery.of(context).size.width > 360
                                           ? 18
